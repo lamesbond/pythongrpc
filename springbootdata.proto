@@ -1,0 +1,15 @@
+syntax = "proto3";
+package base_package;
+
+
+service TestGrpcService {
+  rpc testMethod (TestRequest) returns (TestReply){}
+}
+message TestRequest {
+  string id=1;
+  string name=2;
+}
+
+message TestReply {
+  string res=1;
+}
